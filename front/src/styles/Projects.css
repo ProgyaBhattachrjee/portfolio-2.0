@@ -1,0 +1,144 @@
+/* --- Projects Section --- */
+.projects-section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.projects-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: var(--heading-color);
+  position: relative;
+}
+
+.projects-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* --- Project Card --- */
+.project-card {
+  background: #1e293b; /* dark card */
+  color: #f8fafc;
+  border-radius: 16px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Project Image --- */
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* --- Project Info --- */
+.project-info {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  position: relative;
+}
+
+/* Optional subtle underline effect */
+.project-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.project-card:hover .project-title::after {
+  width: 100%;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-desc {
+  color: #fff;
+}
+
+/* --- Project Links --- */
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.project-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .projects-container {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .projects-heading {
+    font-size: 2.4rem;
+  }
+}

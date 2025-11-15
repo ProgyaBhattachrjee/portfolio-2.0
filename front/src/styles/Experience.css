@@ -1,0 +1,132 @@
+/* --- Experience Section (Card Layout) --- */
+.experience-section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 80px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+/* --- Heading --- */
+.experience-heading {
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+.experience-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.experience-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+}
+
+/* --- Experience Card --- */
+.experience-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px 20px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Star doodle inside card */
+.experience-card::before {
+  content: "✦";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  color: rgba(255, 76, 96, 0.2);
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+/* --- Card Content --- */
+.experience-role {
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.experience-org {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.experience-duration {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 12px;
+}
+
+.experience-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 5%;
+    gap: 20px;
+  }
+
+  .experience-card {
+    max-width: 100%;
+  }
+
+  .experience-heading {
+    font-size: 2.4rem;
+  }
+}
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between text and logo */
+  margin-bottom: 12px;
+}
+
+.experience-org {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cbd5e1; /* or light text for dark cards */
+}
+
+.experience-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 6px; /* optional rounded corners */
+}
