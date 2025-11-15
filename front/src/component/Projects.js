@@ -31,7 +31,7 @@ const projects = [
     id: 2,
     title: "Stock-Market-Prediction",
     description: "Stock Market Predictor using machine learning models in Python.",
-    webkitURL:"https://smarthire-1-go8b.onrender.com/",
+    websiteUrl:"https://smarthire-1-go8b.onrender.com/",
     imageUrl: "./sm.png",
     githubUrl: "https://github.com/ProgyaBhattachrjee/Stock-Market-prediction",
   },
